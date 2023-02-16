@@ -20,8 +20,7 @@
 </head>
 
 <body>
-    <div class="container"
-        style=" display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div class="container">
         <div style=" display: flex; flex-direction: row;align-items: center; justify-content: space-around;"
             class="container">
             <h1><a href="">Internal</a></h1>
@@ -40,13 +39,13 @@
                 <br>
                 <h3>Quizes</h3>
                 <label for="noOfQuizes">Enter number of quizes</label>
-                <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                    <div style="width: 70%;">
+                <div class="row" style="display: flex; flex-direction: row; justify-content: space-between;">
+                    <div class="col-9" style="">
                         <input min="0" max="9" placeholder="No. of Quizes" type="number" id="noOfQuizes"
                             style="margin-right: 50px;" class="form-control contact-form"
                             onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
                     </div>
-                    <div class=""><button class="my-btn btn" id="quizSubmit">Submit</button></div>
+                    <div class="col-3"><button class="my-btn btn" id="quizSubmit">Submit</button></div>
                 </div>
             </div>
             <div id="quizes" class="container">
@@ -55,13 +54,13 @@
             <div class="container">
                 <h3>Assignments</h3>
                 <label for="noOfAssignments">Enter number of assignments</label>
-                <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                    <div style="width: 70%;">
+                <div class="row" style="display: flex; flex-direction: row; justify-content: space-between;">
+                    <div class="col-9">
                         <input min="0" max="9" placeholder="No. of Assignments" type="number" id="noOfAssignments"
                             style="margin-right: 50px;" class="form-control contact-form"
                             onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
                     </div>
-                    <div class=""><button class="my-btn btn" id="assSubmit">Submit</button></div>
+                    <div class="col-3"><button class="my-btn btn" id="assSubmit">Submit</button></div>
                 </div>
             </div>
             <div id="assignemnts" class="container">
