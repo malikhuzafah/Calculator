@@ -1,3 +1,16 @@
+body {
+  background-color: #defcf9;
+}
+
+#title {
+  padding: 20px;
+  font-weight: bold;
+}
+
+.form-control {
+  background-color: #f7fbfc;
+}
+
 .my-btn {
   border: 2px solid;
   font-weight: bold;
@@ -23,13 +36,6 @@
 #main-content {
   align-items: center;
   justify-content: center;
-}
-
-#labToggle {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 }
 
 #labSubSwitch,
@@ -70,4 +76,37 @@
 
 .fields {
   padding-top: 10px;
+}
+
+#total {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 300px;
+  padding-top: 50px;
+}
+
+.courses {
+  padding-top: 10px;
+}
+
+.crhrs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-select {
+  width: 60px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .crhrs {
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .crhrs {
+    justify-content: space-around;
+  }
 }

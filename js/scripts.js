@@ -68,6 +68,7 @@ $(function () {
     }
   });
   $("#submit").on("click", function () {
+    $("html, body").animate({ scrollTop: $(document).height() }, 1000);
     var quiz = [];
     var assignment = [];
     var labAssignment = [];
@@ -107,9 +108,10 @@ $(function () {
     theoryTotal += parseInt(getMidterm());
     labTotal += parseInt(getLabMidterm());
     total += parseInt(getFinal()) + 0.75 * theoryTotal + 0.25 * labTotal;
-    $("#total").append(total);
+    $("#total").html("You got: " + total);
   });
   $("#calcSgpa").on("click", function () {
+    $("html, body").animate({ scrollTop: $(document).height() }, 1000);
     var gpa = 0;
     var creditHour = 0;
     var courseNo = $("#noOfCourses").val();
@@ -123,16 +125,21 @@ $(function () {
       }
     }
     var sgpa = gpa / creditHour;
-    $("#total").html(Math.round((sgpa + Number.EPSILON) * 100) / 100);
+    $("#total").html(
+      "Your Semester GPA: " + Math.round((sgpa + Number.EPSILON) * 100) / 100
+    );
   });
   $("#calcCgpa").on("click", function () {
+    $("html, body").animate({ scrollTop: $(document).height() }, 1000);
     var prevCrHrs = parseFloat($("#prevCrHrs").val());
     var prevCgpa = parseFloat($("#prevCgpa").val());
     var currCrHrs = parseFloat($("#currCrHrs").val());
     var currGpa = parseFloat($("#currGpa").val());
     var cgpa =
       (prevCgpa * prevCrHrs + currCrHrs * currGpa) / (currCrHrs + prevCrHrs);
-    $("#total").html(Math.round((cgpa + Number.EPSILON) * 100) / 100);
+    $("#total").html(
+      "Your CGPA: " + Math.round((cgpa + Number.EPSILON) * 100) / 100
+    );
   });
   $("#labSubSwitch").on("click", function () {
     if ($("#labSubSwitch").is(":checked")) {
@@ -191,19 +198,19 @@ function getHtml(type, typeSpaced, index) {
 
 function getSgpaHtml(index) {
   return (
-    "<h6>Course " +
+    '<div class="courses"><h4>Course ' +
     index +
-    '<h6><div class="container"><label for="creditHours' +
+    '</h4><div class="crhrs"><label for="creditHours' +
     index +
-    '">Credit Hours: </label><select id="creditHours' +
+    '">Credit Hours: </label><select class="form-select" id="creditHours' +
     index +
     '" name="creditHours' +
     index +
-    '"><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option></select><label for="gpa">GPA: </label><select id="gpa' +
+    '"><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option></select><label for="gpa">GPA: </label><select  class="form-select" id="gpa' +
     index +
     '" name="gpa' +
     index +
-    '"><option value="4">4</option><option value="3.7">3.7</option><option value="3.3">3.3</option><option value="3">3</option><option value="2.7">2.7</option><option value="2.3">2.3</option><option value="2">2</option><option value="1.7">1.7</option><option value="1.3">1.3</option></select>'
+    '"><option value="4">4</option><option value="3.7">3.7</option><option value="3.3">3.3</option><option value="3">3</option><option value="2.7">2.7</option><option value="2.3">2.3</option><option value="2">2</option><option value="1.7">1.7</option><option value="1.3">1.3</option></select></div>'
   );
 }
 
