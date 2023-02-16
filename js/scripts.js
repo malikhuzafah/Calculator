@@ -14,6 +14,7 @@ var finalOutof = 0;
 $(function () {
   $("#labAss").hide();
   $("#labAssContainer").hide();
+  $("#midtermContainer").hide();
   $("#labMidterm").hide();
   $("#labMidtermContainer").hide();
   $("#finalContainer").hide();
@@ -174,14 +175,14 @@ $(function () {
 
 function getHtml(type, typeSpaced, index) {
   return (
-    '<div class="container row"><div class="col-5"><input placeholder="' +
+    '<div class="row fields"><div class="col-5"><input placeholder="' +
     typeSpaced +
     " " +
     index +
     '" class="form-control form-control-sm" type="number" id="' +
     type +
     index +
-    '"></div> <div class="col-3">out of</div><div class="col-4"><input class="form-control form-control-sm" type="number" value="10" id="' +
+    '"></div> <div class="col-3 text-center">out of</div><div class="col-4"><input class="form-control form-control-sm" type="number" value="10" id="' +
     type +
     index +
     'Outof"></div></div>'
@@ -192,7 +193,7 @@ function getSgpaHtml(index) {
   return (
     "<h6>Course " +
     index +
-    '<h6><div style="justify-content:center" class="container"><label for="creditHours' +
+    '<h6><div class="container"><label for="creditHours' +
     index +
     '">Credit Hours: </label><select id="creditHours' +
     index +

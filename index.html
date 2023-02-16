@@ -21,134 +21,140 @@
 
 <body>
     <div class="container">
-        <div style="display: flex; flex-direction: row; justify-content: space-evenly; padding: 50px;"
-            class="container">
+        <div id="topBar" class="container">
             <a href="" class="btn my-btn">Internal</a>
             <a href="./cgpa.html" class="btn my-btn">CGPA</a>
             <a href="./sgpa.html" class="btn my-btn">SGPA</a>
         </div>
-        <div class="container" style="align-items: center; justify-content: center;">
+
+        <div class="container" id="main-content">
             <div class="container">
-                <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                <div id="labToggle">
                     <span class="h3 form-check-label">Lab Subject?</span>
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="labSubSwitch"
-                            style="height: 25px; width:50px;">
+                        <input class="form-check-input" type="checkbox" id="labSubSwitch">
                     </div>
                 </div>
                 <br>
+            </div>
+
+
+            <div class="container categories">
                 <h3>Quizes</h3>
-                <label for="noOfQuizes">Enter number of quizes</label>
-                <div class="row w-100">
-                    <div class="col-9" style="">
-                        <input min="0" max="9" placeholder="No. of Quizes" type="number" id="noOfQuizes"
-                            style="margin-right: 50px;" class="form-control contact-form"
+                <span>Number of Quizes</span>
+                <div class="row w-100 noOfs">
+                    <div class="col-8 noPadding">
+                        <input id="noOfQuizes" type="number" class="form-control contact-form"
+                            placeholder="No. of Quizes" min="0"
                             onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
                     </div>
-                    <div class="col-3"><button class="my-btn btn" id="quizSubmit">Submit</button></div>
+                    <div class="col-4 d-flex justify-content-end noPadding">
+                        <button class="my-btn btn" id="quizSubmit">Submit</button>
+                    </div>
                 </div>
             </div>
-            <div id="quizes" class="container">
+            <div id="quizes" class="container"></div>
 
-            </div>
-            <div class="container">
+
+            <div class="container categories">
                 <h3>Assignments</h3>
-                <label for="noOfAssignments">Enter number of assignments</label>
-                <div class="row w-100" style="display: flex; flex-direction: row; justify-content: space-between;">
-                    <div class="col-9">
-                        <input min="0" max="9" placeholder="No. of Assignments" type="number" id="noOfAssignments"
-                            style="margin-right: 50px;" class="form-control contact-form"
+                <span>Number of Assignments</span>
+                <div class="row w-100 noOfs">
+                    <div class="col-8 noPadding">
+                        <input id="noOfAssignments" placeholder="No. of Assignments" type="number"
+                            class="form-control contact-form" min="0"
                             onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
                     </div>
-                    <div class="col-3"><button class="my-btn btn" id="assSubmit">Submit</button></div>
+                    <div class="col-4 d-flex justify-content-end noPadding">
+                        <button class="my-btn btn" id="assSubmit">Submit</button>
+                    </div>
                 </div>
             </div>
-            <div id="assignemnts" class="container">
+            <div id="assignemnts" class="container"></div>
 
-            </div>
-            <div id="labAss" class="container">
-                <div style="display: flex; flex-direction: row; justify-content: space-between;">
+
+            <div id="labAss" class="container categories">
+                <div class="toggleHead">
                     <span class="h3">Lab Assignments</span>
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="labAssSwitch"
-                            style="height: 25px; width:50px;">
+                        <input class="form-check-input" type="checkbox" id="labAssSwitch">
                     </div>
                 </div>
                 <div id="labAssContainer">
-                    <label for="noOfLabAssignments">Enter number of lab assignments</label>
-                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                        <div style="width:70%">
-                            <input min="0" max="9" placeholder="No. of Lab Assignments" type="number"
-                                id="noOfLabAssignments" style="margin-right: 50px;" class="form-control contact-form"
+                    <span>Number of Lab Assignments</span>
+                    <div class="row w-100 noOfs">
+                        <div class="col-8 noPadding">
+                            <input placeholder="No. of Lab Assignments" id="noOfLabAssignments"
+                                class="form-control contact-form" min="0" type="number"
                                 onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
                         </div>
-                        <div class=""><button class="my-btn btn" id="labAssSubmit">Submit</button></div>
+                        <div class="col-4 d-flex justify-content-end noPadding">
+                            <button class="my-btn btn" id="labAssSubmit">Submit</button>
+                        </div>
                     </div>
                 </div>
             </div>
             <div id="labAssignments" class="container"></div>
 
-            <div class="container">
-                <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            <div class="container categories">
+                <div class="toggleHead">
                     <span class="h3">Midterm</span>
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="midtermSwitch" checked
-                            style="height: 25px; width:50px;">
+                        <input class="form-check-input" type="checkbox" id="midtermSwitch">
                     </div>
                 </div>
                 <div id="midtermContainer" class="row w-100">
-                    <div class="col-5">
+                    <div class="col-5 noPadding">
                         <input placeholder="Midterm marks" class="form-control form-control-sm" type="number"
                             id="midterm">
                     </div>
-                    <div class="col-3">out of</div>
-                    <div class="col-4">
+                    <div class="col-3 text-center"><span>out of</span></div>
+                    <div class="col-4 noPadding">
                         <input class="form-control form-control-sm" type="number" value="25" id="midtermOutOf">
                     </div>
                 </div>
             </div>
 
-            <div id="labMidterm" class="container">
-                <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            <div id="labMidterm" class="container categories">
+                <div class="toggleHead">
                     <span class="h3">Lab Midterm</span>
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="labMidtermSwitch"
-                            style="height: 25px; width:50px;">
+                        <input class="form-check-input" type="checkbox" id="labMidtermSwitch">
                     </div>
                 </div>
                 <div id="labMidtermContainer" class="row w-100">
-                    <div class="col-5">
-                        <input placeholder="Lab Midterm marks" class="form-control " type="number" id="labMidtermMarks">
+                    <div class="col-5 noPadding">
+                        <input placeholder="Lab Midterm marks" class="form-control form-control-sm" type="number"
+                            id="labMidtermMarks">
                     </div>
-                    <div class="col-3">out of</div>
-                    <div class="col-4">
-                        <input class="form-control " type="number" value="25" id="labMidtermOutOf">
+                    <div class="col-3 text-center"><span>out of</span></div>
+                    <div class="col-4 noPadding">
+                        <input class="form-control form-control-sm" type="number" value="25" id="labMidtermOutOf">
                     </div>
                 </div>
             </div>
 
-            <div class="container">
-                <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            <div class="container categories">
+                <div class="toggleHead">
                     <span class="h3">Final</span>
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="finalSwitch"
-                            style="height: 25px; width:50px;">
+                        <input class="form-check-input" type="checkbox" id="finalSwitch">
                     </div>
                 </div>
                 <div id="finalContainer" class="row w-100">
-                    <div class="col-5">
+                    <div class="col-5 noPadding">
                         <input placeholder="Final marks" class="form-control form-control-sm" type="number" id="final">
                     </div>
-                    <div class="col-3">out of</div>
-                    <div class="col-4">
+                    <div class="col-3 text-center"><span>out of</span></div>
+                    <div class="col-4 noPadding">
                         <input class="form-control form-control-sm" type="number" value="50" id="finalOutof">
                     </div>
                 </div>
             </div>
-            <div class="container" style="display: flex; justify-content: center;">
+            <div class="container categories d-flex justify-content-center">
                 <button class="btn my-btn" id="submit">Submit</button>
             </div>
-            <div id="total" class="container"></div>
+            <div id="total" class="container categories"></div>
         </div>
     </div>
 </body>

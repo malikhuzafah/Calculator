@@ -12,3 +12,62 @@
   color: #efeee5;
   transition: 500ms;
 }
+
+#topBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+#main-content {
+  align-items: center;
+  justify-content: center;
+}
+
+#labToggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#labSubSwitch,
+#labAssSwitch,
+#midtermSwitch,
+#labMidtermSwitch,
+#finalSwitch {
+  height: 25px;
+  width: 50px;
+}
+
+.toggleHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#midtermContainer,
+#labMidtermContainer,
+#finalContainer {
+  margin: 0;
+}
+
+.noOfs {
+  margin: 0;
+  display: flex;
+  justify-content: end;
+}
+
+.categories {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.noPadding {
+  padding: 0;
+}
+
+.fields {
+  padding-top: 10px;
+}
