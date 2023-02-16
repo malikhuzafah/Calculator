@@ -20,31 +20,41 @@
 </head>
 
 <body>
-    <div style=" display: flex; flex-direction: row;align-items: center; justify-content: space-around;"
-        class="container">
-        <h1><a href="./index.html">Internal</a></h1>
-        <h1><a href="">CGPA</a></h1>
-        <h1><a href="./sgpa.html">SGPA</a></h1>
-    </div>
-    <div class="container" style="width: max-content; align-items: center;">
-        <div class="container">
-            <span class="h3">CGPA</span><br>
-            <label for="prevCrHrs">Enter total credit hours studied: </label>
-            <input placeholder="Prev. Cr Hrs." class="form-control" type="number" id="prevCrHrs" name="prevCrHrs">
-            <label for="prevCgpa">Enter CGPA: </label>
-            <input placeholder="Prev. CGPA" class="form-control" type="number" id="prevCgpa" name="prevCgpa">
+    <div class="container">
+        <div id="topBar" class="container">
+            <a href="./index.html" class="btn my-btn">Internal</a>
+            <a href="" class="btn my-btn">CGPA</a>
+            <a href="./sgpa.html" class="btn my-btn">SGPA</a>
         </div>
-        <div class="container">
-            <span class="h3">Semester GPA</span><br>
-            <label for="currCrHrs">Enter total credit hours studied this semester: </label>
-            <input placeholder="Current Cr. Hrs." class="form-control" type="number" id="currCrHrs" name="currCrHrs">
-            <label for="currGpa">Enter semester GPA: </label>
-            <input placeholder="Semester GPA" class="form-control" type="number" id="currGpa" name="currGpa">
+
+        <div class="container" id="main-content">
+            <div class="container categories">
+                <h3>CGPA</h3>
+                <span>Total credit hours studied: </span>
+                <br>
+                <input placeholder="Prev. Cr Hrs." class="form-control" type="number" id="prevCrHrs" name="prevCrHrs">
+                <br>
+                <span>Previous CGPA: </span>
+                <br>
+                <input placeholder="Prev. CGPA" class="form-control" type="number" id="prevCgpa" name="prevCgpa">
+            </div>
+
+            <div class="container categories">
+                <h3>Semester GPA</h3>
+                <span>Total credit hours studied this semester: </span>
+                <br>
+                <input placeholder="Current Cr. Hrs." class="form-control" type="number" id="currCrHrs"
+                    name="currCrHrs">
+                <br>
+                <span>Semester GPA: </span>
+                <br>
+                <input placeholder="Semester GPA" class="form-control" type="number" id="currGpa" name="currGpa">
+            </div>
+            <div class="container categories" style="display: flex; justify-content: center;">
+                <button class="btn my-btn" id="calcCgpa">Calculate</button>
+            </div>
+            <div id="total" class="container categories"></div>
         </div>
-        <div class="container" style="display: flex; justify-content: center;">
-            <button class="btn my-btn" id="calcCgpa">Calculate</button>
-        </div>
-        <div id="total" class="container"></div>
     </div>
 </body>
 
