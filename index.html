@@ -21,13 +21,13 @@
 
 <body>
     <div class="container">
-        <div style=" display: flex; flex-direction: row;align-items: center; justify-content: space-around;"
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly; padding: 50px;"
             class="container">
-            <h1><a href="">Internal</a></h1>
-            <h1><a href="./cgpa.html">CGPA</a></h1>
-            <h1><a href="./sgpa.html">SGPA</a></h1>
+            <a href="" class="btn my-btn">Internal</a>
+            <a href="./cgpa.html" class="btn my-btn">CGPA</a>
+            <a href="./sgpa.html" class="btn my-btn">SGPA</a>
         </div>
-        <div class="container" style="width: max-content; align-items: center;">
+        <div class="container" style="align-items: center; justify-content: center;">
             <div class="container">
                 <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
                     <span class="h3 form-check-label">Lab Subject?</span>
@@ -39,7 +39,7 @@
                 <br>
                 <h3>Quizes</h3>
                 <label for="noOfQuizes">Enter number of quizes</label>
-                <div class="row" style="display: flex; flex-direction: row; justify-content: space-between;">
+                <div class="row w-100">
                     <div class="col-9" style="">
                         <input min="0" max="9" placeholder="No. of Quizes" type="number" id="noOfQuizes"
                             style="margin-right: 50px;" class="form-control contact-form"
@@ -54,7 +54,7 @@
             <div class="container">
                 <h3>Assignments</h3>
                 <label for="noOfAssignments">Enter number of assignments</label>
-                <div class="row" style="display: flex; flex-direction: row; justify-content: space-between;">
+                <div class="row w-100" style="display: flex; flex-direction: row; justify-content: space-between;">
                     <div class="col-9">
                         <input min="0" max="9" placeholder="No. of Assignments" type="number" id="noOfAssignments"
                             style="margin-right: 50px;" class="form-control contact-form"
@@ -96,7 +96,7 @@
                             style="height: 25px; width:50px;">
                     </div>
                 </div>
-                <div id="midtermContainer" class="row">
+                <div id="midtermContainer" class="row w-100">
                     <div class="col-5">
                         <input placeholder="Midterm marks" class="form-control form-control-sm" type="number"
                             id="midterm">
@@ -116,14 +116,13 @@
                             style="height: 25px; width:50px;">
                     </div>
                 </div>
-                <div id="labMidtermContainer" class="row">
+                <div id="labMidtermContainer" class="row w-100">
                     <div class="col-5">
-                        <input placeholder="Lab Midterm marks" class="form-control form-control-sm" type="number"
-                            id="labMidtermMarks">
+                        <input placeholder="Lab Midterm marks" class="form-control " type="number" id="labMidtermMarks">
                     </div>
                     <div class="col-3">out of</div>
                     <div class="col-4">
-                        <input class="form-control form-control-sm" type="number" value="25" id="labMidtermOutOf">
+                        <input class="form-control " type="number" value="25" id="labMidtermOutOf">
                     </div>
                 </div>
             </div>
@@ -136,7 +135,7 @@
                             style="height: 25px; width:50px;">
                     </div>
                 </div>
-                <div id="finalContainer" class="row">
+                <div id="finalContainer" class="row w-100">
                     <div class="col-5">
                         <input placeholder="Final marks" class="form-control form-control-sm" type="number" id="final">
                     </div>
