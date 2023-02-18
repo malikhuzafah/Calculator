@@ -250,7 +250,7 @@ function getHtml(type, typeSpaced, index) {
     typeSpaced +
     " " +
     index +
-    '" class="form-control form-control-sm" value="10" type="number" id="' +
+    '" class="form-control form-control-sm" type="number" id="' +
     type +
     index +
     '"></div> <div class="col-3 text-center">out of</div><div class="col-4"><input class="form-control form-control-sm" type="number" value="10" id="' +
