@@ -147,9 +147,10 @@ $(function () {
     labTotal += isLabCourse && isLabMidterm ? parseFloat(getLabMidterm()) : 0;
 
     if (isLabCourse) {
-      total = isFinal
-        ? parseFloat(getFinal())
-        : 0.75 * theoryTotal + 0.25 * labTotal;
+      total =
+        0.75 * theoryTotal +
+        0.25 * labTotal +
+        (isFinal ? parseFloat(getFinal()) : 0);
     } else {
       total = theoryTotal + (isFinal ? parseFloat(getFinal()) : 0);
     }
