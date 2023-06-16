@@ -149,10 +149,8 @@ $(function () {
     if (isLabCourse) {
       total = isFinal
         ? parseFloat(getFinal())
-        : 0 + 0.75 * theoryTotal + 0.25 * labTotal;
+        : 0.75 * theoryTotal + 0.25 * labTotal;
     } else {
-      console.log("theory total: " + theoryTotal);
-      console.log("final: " + parseFloat(getFinal()));
       total = theoryTotal + (isFinal ? parseFloat(getFinal()) : 0);
     }
     $("#total").html("You got: " + total);
@@ -210,6 +208,7 @@ $(function () {
     } else {
       isLabAss = false;
       $("#labAssContainer").hide();
+      $("#labAssignments").html("");
     }
   });
 
